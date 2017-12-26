@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(value = "帖子服务")
+@Api(value = "帖子服务",tags = {"帖子API"})
 @RestController
 public class PostController {
 

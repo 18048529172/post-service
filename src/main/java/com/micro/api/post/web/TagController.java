@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
  * @author liw@suncd.com
  * @date 2017/12/25 16:00
  */
-@Api(value = "标签服务")
+@Api(value = "标签服务",tags = {"标签API"})
 @RestController
 public class TagController {
 
