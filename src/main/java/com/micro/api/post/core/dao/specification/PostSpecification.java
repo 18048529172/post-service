@@ -54,7 +54,7 @@ public class PostSpecification<Post> implements Specification<Post> {
                 Predicate orgIdPredicate = criteriaBuilder.equal(root.get("orgId"),orgId);
                 predicates.add(orgIdPredicate);
             }
-            if(! queryPost.getTagIds().isEmpty()){
+            if(queryPost != null && ! queryPost.getTagIds().isEmpty()){
                 SetJoin<Post,PostTag> postTagSetJoin = root.joinSet("postTags", JoinType.LEFT);
                 Join<PostTag,Tag> tagJoin =  postTagSetJoin.join("tag",JoinType.LEFT);
                 CriteriaBuilder.In<Long> in = criteriaBuilder.in(tagJoin.get("id"));
